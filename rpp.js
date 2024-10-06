@@ -1,6 +1,6 @@
 
 //function return random pick 'rock' 'paper' 'scissor'
-function cmpChoice() {
+function getComputerChoice() {
     const randomPick = Math.floor(Math.random() * 3);
     
     switch (randomPick) {
@@ -13,7 +13,9 @@ function cmpChoice() {
     }
 }
 
-
-for (let index = 0; index < 10; index++) {
-    console.log(`${index + 1}. ${cmpChoice()}`)
+function getHumanChoice() {
+    let humanInput = prompt("Pilih antar scisor or banan: ");
+    console.log(humanInput);
 }
+
+getHumanChoice()

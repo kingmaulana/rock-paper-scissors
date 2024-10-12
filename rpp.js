@@ -108,10 +108,14 @@ buttons.forEach((button) => {
             } else if(round < 0) {
                 scoreHuman.textContent = 0;
                 scoreComputer.textContent = 0;
+                humanScore = 0;
+                computerScore = 0;
                 finalScore.innerText = '';
                 round = 5;
             }
             console.log(round)
+
+            headerLap.innerText = round + ' - Round left';
     })
 });
 
@@ -127,7 +131,7 @@ let round = 5;
 
 const headerLap = document.createElement('h2');
 const h1 = document.querySelector('.result h1');
-headerLap.innerText = '-- Round ' + round +' of 5 --'
+headerLap.innerText = 5 + ' - Round left'
 h1.parentNode.append(headerLap);
 
 const finalScore = document.querySelector('.final-result');
